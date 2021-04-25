@@ -17,7 +17,7 @@ public class Allo_Koval {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get("https://www.youtube.com/watch?v=OKWl5brw8TE");
+        driver.get("https://www.donnu.edu.ua/uk/");
     }
 
     @Test
