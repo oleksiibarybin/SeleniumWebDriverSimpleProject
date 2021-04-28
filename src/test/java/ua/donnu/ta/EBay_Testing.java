@@ -73,6 +73,7 @@ public class EBay_Testing {
     public void checkIncorrectEmailFormat() throws InterruptedException{
         Thread.sleep(300);
         driver.findElement(By.xpath("//*[@id=\"gh-ug\"]/a")).click();
+        Thread.sleep(3000);
         driver.findElement(By.xpath("//*[@id=\"userid\"]")).sendKeys("icorrectemailformat@check.com");
         Thread.sleep(300);
         String searchOutput = driver.findElement(By.xpath("//*[@id=\"signin-error-msg\"]")).getText();
