@@ -68,7 +68,7 @@ public class Allo_Koval {
                 .click(enterButton)
                 .build()
                 .perform();
-        Thread.sleep(500);
+        Thread.sleep(1000);
         WebElement errormassage = driver.findElement(By.xpath("//div[@class = 'modal-input validation-error']"));
 
         Assertions.assertEquals("Будь ласка, введіть коректний email. Наприклад, johndoe@domain.com.", errormassage.getText());
@@ -85,11 +85,11 @@ public class Allo_Koval {
         new Actions(driver)
                 .moveToElement(inputString)
                 .doubleClick(inputString)
-                .sendKeys(inputString, "Samsung a52")
+                .sendKeys(inputString, "Samsung")
                 .click(searchButton)
                 .build()
                 .perform();
-        Thread.sleep(500);
+        Thread.sleep(1000);
         List<WebElement> listOfTitles = driver.findElements(By.xpath("//a[@class = 'product-card__title']")); /*viznachaem te elementi kotorie imeut zagolovok*/
 
         int i;
@@ -143,10 +143,6 @@ public class Allo_Koval {
         System.out.print(priceList);
         Assertions.assertEquals(priceList, priceList2);
     }
-
-
-
-
 
         @AfterEach
     public void tearDown() {driver.close();}
