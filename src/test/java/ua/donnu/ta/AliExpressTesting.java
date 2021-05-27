@@ -34,7 +34,8 @@ public class AliExpressTesting {
         WebElement searchButton = driver.findElement(By.xpath("//*[@class = 'search-button']"));
         searchButton.click();
         String zeroResultsText = driver.findElement(By.xpath("//*[@class= 'query-help']/span")).getText();
-        Assertions.assertEquals(String.format("Sorry, your search \"%s\" did not match any products. Please try again.", searchWord), zeroResultsText);
+        Assertions.assertEquals(String.format("Sorry, your search \"%s\" did not match any products. Please " +
+                "try again.", searchWord), zeroResultsText);
     }
     @Test
     public void checkSearchWordInEveryResult() throws InterruptedException {
