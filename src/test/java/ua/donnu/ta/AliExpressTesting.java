@@ -71,7 +71,7 @@ public class AliExpressTesting {
     @Test
     public void checkIncorrectEmail() throws InterruptedException{
         driver.findElement(By.xpath("//*[@class='_34l2i']")).click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         WebElement emailBox = driver.findElement(By.xpath("//*[@id='fm-login-id']"));
         WebElement passwordBox = driver.findElement(By.xpath("//*[@id='fm-login-password']"));
         String email = "afichwihf";
